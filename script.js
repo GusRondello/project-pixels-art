@@ -9,23 +9,23 @@ window.onload = function () {
   const button = document.getElementById('clear-board');
 
   function classSelected(event) {
-    let selected = document.querySelector('.selected');
+    const selected = document.querySelector('.selected');
     selected.classList.remove('selected');
     event.target.classList += ' selected';
   }
 
   function printColor(event) {
-    let selected = document.querySelector('.selected');
-    let colorSelected = selected.getAttribute('id');
+    const selected = document.querySelector('.selected');
+    const colorSelected = selected.getAttribute('id');
     //   let pixelBlock = document.querySelectorAll('.pixel');
     //   pixelBlock.setAttribute("id", colorSelected)
     event.target.setAttribute('id', colorSelected);
   }
 
   function clearBoard() {
-    let pixelArray = document.getElementsByClassName('pixel');
+    const pixelArray = document.getElementsByClassName('pixel');
     for (let i = 0; i < pixelArray.length; i += 1) {
-      let pixelBoard = pixelArray[i];
+      const pixelBoard = pixelArray[i];
       pixelBoard.removeAttribute('id');
     }
   }
@@ -33,7 +33,7 @@ window.onload = function () {
   collorPalette.addEventListener('click', classSelected);
   pixel.addEventListener('click', printColor);
   button.addEventListener('click', clearBoard);
-  let pixelArray = document.getElementsByClassName('pixel');
+  /*   let pixelArray = document.getElementsByClassName('pixel');
   let pixelBoard = pixelArray[10];
-  console.log(pixelBoard);
+  console.log(pixelBoard); */
 };

@@ -28,7 +28,9 @@
 #pixel-board {
   margin-top: 10px;
   width: fit-content;
+  font-size: 0%;
 }
+
 .pixel {
   display: inline-block;
   border: 1px solid black;
